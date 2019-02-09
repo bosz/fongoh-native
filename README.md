@@ -1,5 +1,6 @@
-# fongoh-native
+# Fongoh Native
 Learn react native, push notification, rn-redux, theming and many more with Fongoh
+
 This repository is like my test ground for implementing certain aspects on mobile app development using react native. 
 
 It will be covering topics like
