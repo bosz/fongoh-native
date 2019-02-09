@@ -10,6 +10,7 @@ It will be covering topics like
 - Theming
 
 # Setup and run
+This is based on react native 0.58.4 . To setup this project and run it, do the following
 1. clone the repo `git clone https://github.com/bosz/fongoh-native.git`
 2. enter the project directory `cd fongoh-native`
 3. Install dependencies `npm install`
