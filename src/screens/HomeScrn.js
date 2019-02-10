@@ -70,7 +70,7 @@ class HomeScrn extends Component<Props> {
             </TouchableOpacity>
           </View>
           <View>
-            <Text style={[styles.instructions, styles.lineThrough]}>Remote Notifications</Text>
+            <Text style={[styles.instructions]}>Remote Notifications</Text>
             <Text style={[styles.instructions, styles.lineThrough]}>Redux</Text>
             <Text style={[styles.instructions, styles.lineThrough]}>Theming</Text>
           </View>
