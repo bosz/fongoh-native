@@ -11,6 +11,7 @@ const configure = () => {
    onNotification: function(notification) {
      // process the notification
      // required on iOS only
+     console.warn(notification)
      notification.finish(PushNotificationIOS.FetchResult.NoData);
    },
 
@@ -44,9 +45,29 @@ const localNotification = (title="fongoh, try me") => {
  });
 };
 
+const localNotificationSchedule = (title="fongoh, try me", date) => {
+ PushNotification.localNotificationSchedule({
+   autoCancel: true,
+   largeIcon: "ic_launcher",
+   smallIcon: "ic_notification",
+   bigText: "Fongoh, your insanity is just what the world needs. Keep making more people insane.",
+   subText: "You the best",
+   color: "green",
+   vibrate: true,
+   vibration: 300,
+   title: title,
+   date: date,
+   message: "I really love the cray work",
+   playSound: true,
+   soundName: 'default',
+   actions: '["Accept", "Reject"]',
+ });
+};
+
 
 
 export {
+  localNotificationSchedule, 
   localNotification,
   configure,
 };
