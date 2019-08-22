@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import HomeScrn from './HomeScrn';
 import OneSignal from 'react-native-onesignal'; 
+import Router from './Router';
 
-import { PushNotifications } from './../services';
+import { PushNotifications } from './services';
 
 PushNotifications.configure();
 
@@ -40,7 +40,7 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-      <HomeScrn />
+      <Router />
     );
   }
 }
