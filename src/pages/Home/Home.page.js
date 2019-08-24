@@ -40,41 +40,12 @@ class Home extends Component<Props> {
             <Text style={[styles.welcome, {marginBottom: 5}]}>Fongoh Martin</Text>
           </View>
 
-          <View style={{ flex: 3, justifyContent: 'center',}}>
-            <View style={{  flexDirection: 'row' }}>
-              <View style={{ flex: 2, justifyContent: 'center' }}>
-                <TextInput 
-                  underlineColorAndroid="transparent"
-                  placeholder="Leave a message, ..."
-                  autoCapitalize="sentences"
-                  onChangeText={ (text) => this.setState({message: text}) } 
-                  placeholderTextColor="#ffffffa3"
-                  style={{ marginRight: 3, borderWidth: 1, color: '#fff', borderColor: '#e74c3ca0', backgroundColor: '#e74c3c70', marginBottom: 2, height: 44, paddingVertical: 10, paddingHorizontal: 10 }} />
-                <Text style={styles.label}>Leave a message for Fongoh</Text>
-              </View>
-            
-              <View style={{ flex: 1, justifyContent: 'center' }}>
-                <TextInput 
-                  underlineColorAndroid="transparent"
-                  placeholder="X seconds"
-                  autoCapitalize="sentences"
-                  keyboardType="numeric"
-                  onChangeText={ (text) => this.setState({seconds: text}) } 
-                  placeholderTextColor="#ffffffa3"
-                  style={{ marginLeft: 3, borderWidth: 1, color: '#fff', borderColor: '#e74c3ca0', backgroundColor: '#e74c3c70', marginBottom: 2, height: 44, paddingVertical: 10, paddingHorizontal: 10 }} />
-                <Text style={styles.label}>Deliver in</Text>
-              </View>
-            </View>
-            <TouchableOpacity 
-              style={{ marginTop: 20, backgroundColor: '#e74c3c' }} 
-              onPress={() => this.sendNotification()}
-              >
-              <Text style={[styles.instructions, {color: '#fff', fontWeight: 'bold'}]}>Notify him</Text>
-            </TouchableOpacity>
-          </View>
           <View style={{ flex: 3, borderWidth: 1, paddingHorizontal: 10, borderColor: '#ecf0f1' }}>
-            <Text style={[styles.instructions]}>Remote Notifications (done)</Text>
+            <Text style={[styles.instructions]}>Topics covered</Text>
             <View style={styles.actionButtonContainer}>
+              <TouchableOpacity style={styles.actionButton} onPress={() => this.props.navigation.navigate('AppNotification')} >
+                <Text style={styles.actionButtonText}>Notification</Text>
+              </TouchableOpacity>
               <TouchableOpacity style={styles.actionButton} onPress={() => this.props.navigation.navigate('Theming')} >
                 <Text style={styles.actionButtonText}>Theming</Text>
               </TouchableOpacity>
