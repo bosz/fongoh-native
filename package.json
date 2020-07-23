@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "parse": "^2.6.0",
+    "parse": "^2.10.0",
     "parse-react": "^0.5.2",
     "react": "16.6.3",
     "react-native": "0.58.4",
